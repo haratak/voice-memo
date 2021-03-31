@@ -36,6 +36,8 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
         
         if let number = intent.number{
             self.contentLabel.text = "耳標番号は \(number) ですか？"
+        }else{
+            self.contentLabel.text = "耳標番号を指定してください。"
         }
         completion(true, parameters, self.desiredSize)
     }

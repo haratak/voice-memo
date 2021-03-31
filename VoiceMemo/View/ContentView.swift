@@ -62,10 +62,10 @@ struct ContentView: View {
     }
     func makeDonation(number:NSNumber) {
             let intent = CreateMemoIntent()
-            print("Intent:\(intent)")
+//            print("Intent:\(intent)")
             
-            intent.number = number
-            intent.suggestedInvocationPhrase = "Create Memo"
+//            intent.number = number
+            intent.suggestedInvocationPhrase = "うしめも"
             
             let interaction = INInteraction(intent: intent, response: nil)
             print("Interaction:\(interaction)")
