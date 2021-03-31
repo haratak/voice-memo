@@ -17,11 +17,11 @@ struct VoiceMemo: App {
         WindowGroup {
             ContentView()
         }
-//        .onChange(of: scenePhase) { phase in
-//                 INPreferences.requestSiriAuthorization({status in
-//                 // Handle errors here
-//                    
-//             })
-//         }
+        .onChange(of: scenePhase) { phase in
+                 INPreferences.requestSiriAuthorization({status in
+                 // Handle errors here
+                    
+             })
+         }
     }
 }

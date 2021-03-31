@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>VoiceMemoIntents.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>VoiceMemoIntentsUI.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 	</dict>
 </dict>
 </plist>
