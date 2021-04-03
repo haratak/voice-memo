@@ -1,84 +1,80 @@
 //
 //  ContentView.swift
-//  VoiceMemo
+//  Coredata+SwiftUI
 //
-//  Created by Takuya Hara on 2021/03/29.
+//  Created by Takuya Hara on 2021/04/03.
 //
 
 import SwiftUI
-import RealmSwift
-import Intents
+import CoreData
 
 struct ContentView: View {
-    @ObservedObject var model = MemoStore()
+    @Environment(\.managedObjectContext) private var viewContext
     @State private var isPresented = false
-    
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Memo.date, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<Memo>
+
     var body: some View {
         NavigationView{
-            Form{
-                List{
-                    ForEach(model.memoList,id: \.id){ memo in
-                            HStack {
-                                Text(String(memo.number))
-                                Text(memo.body)
-                                    .onLongPressGesture {
-                                    }
-                                Spacer()
-                                Text(memo.dateString)
-                            }
-
-                        }
-                    .onDelete{
-                            indexSet in if let index = indexSet.first {
-                                let realm = try?Realm()
-                                try? realm?.write {
-                                    realm?.delete(self.model.memoList[index])
-                                }
-                            }
-                        }
+            List {
+                ForEach(items) { item in
+                    HStack{
+                        Text("\(item.number)")
+                        Text("\(item.condition ?? "なし")")
+                        Spacer()
+                        Text("\(item.date!, formatter: itemFormatter)")
+                    }
                 }
+                .onDelete(perform: deleteItems)
             }
             .navigationTitle("リスト")
             .toolbar{
                       ToolbarItem(placement: .navigationBarTrailing){
                           Button(action: {
-                            model.openNewPage.toggle()
+                            self.isPresented.toggle()
                           }){
                             Image(systemName: "plus")
                                 .font(.title2)
                           }
                       }
                  }
-                  .sheet(isPresented: $model.openNewPage, content: {
-                    AddMemoView()
-                          .environmentObject(model)
-                  })
+            .sheet(isPresented: $isPresented, content: {
+              AddMemoView()
+                    
+            })
 
-        }
-        .onAppear(){
-//            self.makeDonation(number: 9)
         }
         
     }
-//    func makeDonation(number:NSNumber) {
-//            let intent = CreateMemoIntent()
-////            print("Intent:\(intent)")
-//
-//            intent.number = number
-//            intent.suggestedInvocationPhrase = "うしめも"
-//
-//            let interaction = INInteraction(intent: intent, response: nil)
-//            print("Interaction:\(interaction)")
-//
-//            interaction.donate { (error) in
-//                if error != nil {
-//                    if let error = error as NSError? {
-//                        print(
-//                         "Donation failed: %@" + error.localizedDescription)
-//                    }
-//                } else {
-//                    print("Successfully donated interaction")
-//                }
-//        }
-//    }
+
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { items[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+}
+
+private let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .medium
+    return formatter
+}()
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
 }

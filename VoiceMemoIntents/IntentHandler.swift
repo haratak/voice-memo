@@ -7,7 +7,6 @@
 
 import Intents
 import SwiftUI
-
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
 // The intents you wish to handle must be declared in the extension's Info.plist.
