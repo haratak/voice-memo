@@ -17,6 +17,7 @@ import IntentsUI
 class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,14 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
         
         
         if let number = intent.number{
-            self.contentLabel.text = "耳標番号は \(number) ですか？"
+            self.contentLabel.text = "耳標番号 \(number) "
         }else{
-            self.contentLabel.text = "耳標番号を指定してください。"
+            self.contentLabel.text = "耳標番号が入力されていません。"
+        }
+        if let condition = intent.condition{
+            self.conditionLabel.text = "状態 \(condition) で登録しました。"
+        }else{
+            self.conditionLabel.text = "状態が入力されていません。"
         }
         completion(true, parameters, self.desiredSize)
     }

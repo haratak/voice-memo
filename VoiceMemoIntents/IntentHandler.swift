@@ -19,7 +19,6 @@ import SwiftUI
 
 class IntentHandler: INExtension,CreateMemoIntentHandling{
     
-    
     override func handler(for intent: INIntent) -> Any {
 
         guard intent is CreateMemoIntent else {
@@ -37,24 +36,35 @@ class IntentHandler: INExtension,CreateMemoIntentHandling{
                         userActivity: nil))
                 return
         }
+        guard let condition = intent.condition
+           else {
+                completion(CreateMemoIntentResponse(code: .failure,
+                        userActivity: nil))
+                return
+        }
             
-        createMemo(number: number)
-        completion((CreateMemoIntentResponse).success(number: number))
+        completion((CreateMemoIntentResponse).success(number: number, condition: condition))
     }
     
     func resolveNumber(for intent: CreateMemoIntent, with completion: @escaping (CreateMemoNumberResolutionResult) -> Void) {
         if let number = intent.number {
             completion(CreateMemoNumberResolutionResult.success(with:  Int(truncating: number)))
-            createMemo(number: number)
         } else {
             completion(CreateMemoNumberResolutionResult.needsValue())
             return
         }
     }
     
-    func createMemo(number:NSNumber) ->Void{
-        print("Number:\(number)")
+    func resolveCondition(for intent: CreateMemoIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        if let condition = intent.condition {
+            completion(INStringResolutionResult.success(with:  condition))
+        } else {
+            completion(INStringResolutionResult.needsValue())
+            return
+        }
     }
+    
+    
 //
 //    // MARK: - INSendMessageIntentHandling
 //

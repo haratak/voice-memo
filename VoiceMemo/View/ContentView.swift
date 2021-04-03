@@ -56,29 +56,29 @@ struct ContentView: View {
 
         }
         .onAppear(){
-//            self.makeDonation()
+//            self.makeDonation(number: 9)
         }
         
     }
-    func makeDonation(number:NSNumber) {
-            let intent = CreateMemoIntent()
-//            print("Intent:\(intent)")
-            
+//    func makeDonation(number:NSNumber) {
+//            let intent = CreateMemoIntent()
+////            print("Intent:\(intent)")
+//
 //            intent.number = number
-            intent.suggestedInvocationPhrase = "うしめも"
-            
-            let interaction = INInteraction(intent: intent, response: nil)
-            print("Interaction:\(interaction)")
-            
-            interaction.donate { (error) in
-                if error != nil {
-                    if let error = error as NSError? {
-                        print(
-                         "Donation failed: %@" + error.localizedDescription)
-                    }
-                } else {
-                    print("Successfully donated interaction")
-                }
-        }
-    }
+//            intent.suggestedInvocationPhrase = "うしめも"
+//
+//            let interaction = INInteraction(intent: intent, response: nil)
+//            print("Interaction:\(interaction)")
+//
+//            interaction.donate { (error) in
+//                if error != nil {
+//                    if let error = error as NSError? {
+//                        print(
+//                         "Donation failed: %@" + error.localizedDescription)
+//                    }
+//                } else {
+//                    print("Successfully donated interaction")
+//                }
+//        }
+//    }
 }

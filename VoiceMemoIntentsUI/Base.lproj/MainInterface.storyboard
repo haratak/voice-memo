@@ -22,18 +22,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-Qo-eV8" userLabel="Condition Label">
+                                <rect key="frame" x="5" y="40.5" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qoj-tg-eK4" secondAttribute="trailing" constant="5" id="1hX-wj-L9z"/>
                             <constraint firstItem="qoj-tg-eK4" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="5" id="6zf-fc-aPW"/>
+                            <constraint firstItem="dLe-Qo-eV8" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" constant="5" id="CdD-s7-x8G"/>
+                            <constraint firstItem="dLe-Qo-eV8" firstAttribute="top" secondItem="qoj-tg-eK4" secondAttribute="bottom" constant="15" id="KJX-zH-MvL"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="dLe-Qo-eV8" secondAttribute="trailing" constant="5" id="Lud-aD-jdf"/>
                             <constraint firstItem="qoj-tg-eK4" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="5" id="S7x-3c-g4R"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="150"/>
                     <connections>
+                        <outlet property="conditionLabel" destination="dLe-Qo-eV8" id="soJ-Xh-LQQ"/>
                         <outlet property="contentLabel" destination="qoj-tg-eK4" id="ygi-cj-y4B"/>
                     </connections>
                 </viewController>

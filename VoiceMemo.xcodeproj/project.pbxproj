@@ -10,7 +10,6 @@
 		042A489BB47143819C5F6D0A /* Pods_VoiceMemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C44226C43362A6DFD84132 /* Pods_VoiceMemoTests.framework */; };
 		49B1FE07CE66E23D12278D58 /* Pods_VoiceMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8467E5F11B51F9095035FA /* Pods_VoiceMemo.framework */; };
 		692E8F1A044C09322F479342 /* Pods_VoiceMemo_VoiceMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8157BDA2AB881EA5610247 /* Pods_VoiceMemo_VoiceMemoUITests.framework */; };
-		B0289B1D2614155F0083C9E9 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */; };
 		B0289B34261416480083C9E9 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0289B33261416480083C9E9 /* Intents.framework */; };
 		B0289B37261416480083C9E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B36261416480083C9E9 /* IntentHandler.swift */; };
 		B0289B3F261416480083C9E9 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0289B3E261416480083C9E9 /* IntentsUI.framework */; };
@@ -20,8 +19,6 @@
 		B0289B4C261416480083C9E9 /* VoiceMemoIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0289B32261416480083C9E9 /* VoiceMemoIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B0289B8226141A980083C9E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B36261416480083C9E9 /* IntentHandler.swift */; };
 		B0289BE726142A7D0083C9E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B36261416480083C9E9 /* IntentHandler.swift */; };
-		B0289BED26142AC80083C9E9 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */; };
-		B0289BF326142AC80083C9E9 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */; };
 		B0289C09261431BF0083C9E9 /* CreateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289C08261431BF0083C9E9 /* CreateMemoView.swift */; };
 		B0289C0F261431CA0083C9E9 /* CreateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289C08261431BF0083C9E9 /* CreateMemoView.swift */; };
 		B0289C15261431CA0083C9E9 /* CreateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289C08261431BF0083C9E9 /* CreateMemoView.swift */; };
@@ -31,8 +28,13 @@
 		B0374680261201A4008E9996 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037467F261201A4008E9996 /* SceneDelegate.swift */; };
 		B037468526120DC0008E9996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037468426120DC0008E9996 /* AppDelegate.swift */; };
 		B040287D2614A7B500E04C6B /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B41261416480083C9E9 /* IntentViewController.swift */; };
-		B047CAB0261477E300C3E2F1 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */; };
-		B047CAB6261477E300C3E2F1 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */; };
+		B067A55E26181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
+		B067A55F26181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
+		B067A56026181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
+		B067A56126181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
+		B067A56226181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
+		B067A59F261833DA00EF3286 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B067A59E261833DA00EF3286 /* AppIntentVocabulary.plist */; };
+		B067A5B42618364600EF3286 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B067A59E261833DA00EF3286 /* AppIntentVocabulary.plist */; };
 		B0845D532612CC7900AAD582 /* VoiceMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0845D522612CC7900AAD582 /* VoiceMemo.swift */; };
 		B0FBDA892611F53700290AFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBDA882611F53700290AFC /* ContentView.swift */; };
 		B0FBDA8B2611F53800290AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0FBDA8A2611F53800290AFC /* Assets.xcassets */; };
@@ -95,7 +97,6 @@
 		7E8157BDA2AB881EA5610247 /* Pods_VoiceMemo_VoiceMemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceMemo_VoiceMemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		874C36C61CD0A159762B6927 /* Pods-VoiceMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo.release.xcconfig"; path = "Target Support Files/Pods-VoiceMemo/Pods-VoiceMemo.release.xcconfig"; sourceTree = "<group>"; };
 		B0289B18261414490083C9E9 /* VoiceMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoiceMemo.entitlements; sourceTree = "<group>"; };
-		B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		B0289B32261416480083C9E9 /* VoiceMemoIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VoiceMemoIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0289B33261416480083C9E9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		B0289B36261416480083C9E9 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -112,6 +113,9 @@
 		B03746682611F9C9008E9996 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		B037467F261201A4008E9996 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B037468426120DC0008E9996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B067A56326181C1100EF3286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		B067A57026181C1A00EF3286 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
+		B067A59E261833DA00EF3286 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		B0845D522612CC7900AAD582 /* VoiceMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemo.swift; sourceTree = "<group>"; };
 		B0FBDA832611F53700290AFC /* VoiceMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FBDA882611F53700290AFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,7 +180,7 @@
 		B0289B242614156E0083C9E9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B0289B1C2614155F0083C9E9 /* Intents.intentdefinition */,
+				B067A56426181C1100EF3286 /* Intents.intentdefinition */,
 				B0289C08261431BF0083C9E9 /* CreateMemoView.swift */,
 			);
 			path = Shared;
@@ -266,6 +270,7 @@
 				B0FBDA8F2611F53800290AFC /* Info.plist */,
 				B0FBDA8C2611F53800290AFC /* Preview Content */,
 				B037467F261201A4008E9996 /* SceneDelegate.swift */,
+				B067A59E261833DA00EF3286 /* AppIntentVocabulary.plist */,
 				B037468426120DC0008E9996 /* AppDelegate.swift */,
 			);
 			path = VoiceMemo;
@@ -476,6 +481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B067A5B42618364600EF3286 /* AppIntentVocabulary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +499,7 @@
 			files = (
 				B0FBDA8E2611F53800290AFC /* Preview Assets.xcassets in Resources */,
 				B0FBDA8B2611F53800290AFC /* Assets.xcassets in Resources */,
+				B067A59F261833DA00EF3286 /* AppIntentVocabulary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0289C0F261431CA0083C9E9 /* CreateMemoView.swift in Sources */,
-				B0289BED26142AC80083C9E9 /* Intents.intentdefinition in Sources */,
+				B067A56126181C1100EF3286 /* Intents.intentdefinition in Sources */,
 				B040287D2614A7B500E04C6B /* IntentViewController.swift in Sources */,
 				B0289B37261416480083C9E9 /* IntentHandler.swift in Sources */,
 			);
@@ -632,7 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0289C15261431CA0083C9E9 /* CreateMemoView.swift in Sources */,
-				B0289BF326142AC80083C9E9 /* Intents.intentdefinition in Sources */,
+				B067A56226181C1100EF3286 /* Intents.intentdefinition in Sources */,
 				B0289BE726142A7D0083C9E9 /* IntentHandler.swift in Sources */,
 				B0289B42261416480083C9E9 /* IntentViewController.swift in Sources */,
 			);
@@ -650,7 +657,7 @@
 				B02A2F2F2612335D0088E6A3 /* AddMemoView.swift in Sources */,
 				B0289B8226141A980083C9E9 /* IntentHandler.swift in Sources */,
 				B03746692611F9C9008E9996 /* MemoStore.swift in Sources */,
-				B0289B1D2614155F0083C9E9 /* Intents.intentdefinition in Sources */,
+				B067A55E26181C1100EF3286 /* Intents.intentdefinition in Sources */,
 				B0374680261201A4008E9996 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,7 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B047CAB0261477E300C3E2F1 /* Intents.intentdefinition in Sources */,
+				B067A55F26181C1100EF3286 /* Intents.intentdefinition in Sources */,
 				B0FBDA992611F53800290AFC /* VoiceMemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,7 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B047CAB6261477E300C3E2F1 /* Intents.intentdefinition in Sources */,
+				B067A56026181C1100EF3286 /* Intents.intentdefinition in Sources */,
 				B0FBDAA42611F53800290AFC /* VoiceMemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +712,15 @@
 				B0289B44261416480083C9E9 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		B067A56426181C1100EF3286 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B067A56326181C1100EF3286 /* Base */,
+				B067A57026181C1A00EF3286 /* ja */,
+			);
+			name = Intents.intentdefinition;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

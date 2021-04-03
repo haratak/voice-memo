@@ -19,26 +19,46 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>create</string>
+			<key>INIntentConfigurable</key>
+			<true/>
 			<key>INIntentDescription</key>
-			<string>メモを作成します</string>
+			<string>牛のメモを作成します</string>
 			<key>INIntentDescriptionID</key>
 			<string>x6wRyr</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>4</integer>
+			<integer>5</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>number,condition</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>耳標番号${number}、状態${condition}</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>vPrhUA</string>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
 			<key>INIntentName</key>
 			<string>CreateMemo</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key>number</key>
+				<key>number,condition</key>
 				<dict>
-					<key>INIntentParameterCombinationIsLinked</key>
+					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>状態${condition}で登録しました。</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>qPlgM9</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>メモの作成</string>
+					<string>耳標番号${number}</string>
 					<key>INIntentParameterCombinationTitleID</key>
-					<string>GAdfQx</string>
+					<string>ixnCEy</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
@@ -73,7 +93,7 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>何番の牛ですか？</string>
+							<string>耳標番号を教えて下さい</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
 							<string>gU1yVg</string>
 							<key>INIntentParameterPromptDialogType</key>
@@ -120,6 +140,50 @@
 						</dict>
 					</array>
 				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>状態</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>QCOp68</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>ii4kiF</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>condition</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>状態を教えて下さい</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>NUO7T3</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>5</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
 			</array>
 			<key>INIntentResponse</key>
 			<dict>
@@ -127,11 +191,11 @@
 				<array>
 					<dict>
 						<key>INIntentResponseCodeConciseFormatString</key>
-						<string>耳標番号 ${number}を登録しました。</string>
+						<string>耳標番号 ${number}で状態${condition}を登録しました。</string>
 						<key>INIntentResponseCodeConciseFormatStringID</key>
 						<string>NUoik5</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>耳標番号 ${number}を登録しました。</string>
+						<string>耳標番号 ${number}で状態${condition}を登録しました。</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>8kgwcl</string>
 						<key>INIntentResponseCodeName</key>
@@ -153,9 +217,7 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>2</integer>
-				<key>INIntentResponseOutput</key>
-				<string>number</string>
+				<integer>3</integer>
 				<key>INIntentResponseParameters</key>
 				<array>
 					<dict>
@@ -172,16 +234,28 @@
 						<key>INIntentResponseParameterType</key>
 						<string>Integer</string>
 					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>状態</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>WevzIT</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>condition</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>3</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>メモの作成</string>
+			<string>牛の記録</string>
 			<key>INIntentTitleID</key>
 			<string>ASfAAA</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
-			<key>INIntentUserConfirmationRequired</key>
-			<true/>
 			<key>INIntentVerb</key>
 			<string>Create</string>
 		</dict>
