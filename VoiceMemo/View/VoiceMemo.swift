@@ -11,14 +11,14 @@ import Intents
 @main
 struct VoiceMemo: App {
     @Environment(\.scenePhase) private var scenePhase
-    let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared.managedObjectContext
 
     
     var body: some Scene {
         
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController)
         }
         .onChange(of: scenePhase) { phase in
                  INPreferences.requestSiriAuthorization({status in

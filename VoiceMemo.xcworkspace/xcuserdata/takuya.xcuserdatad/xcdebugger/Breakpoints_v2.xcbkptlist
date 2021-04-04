@@ -14,10 +14,10 @@
             filePath = "VoiceMemoIntents/IntentHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "IntentHandler"
-            landmarkType = "3">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "handler(for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +30,10 @@
             filePath = "VoiceMemoIntents/IntentHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "IntentHandler"
-            landmarkType = "3">
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "handle(intent:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,26 +46,10 @@
             filePath = "VoiceMemoIntents/IntentHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "IntentHandler"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E5040E31-3B37-4FD5-8007-74AE4D3E2419"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VoiceMemoIntents/IntentHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "IntentHandler"
-            landmarkType = "3">
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "resolveNumber(for:with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

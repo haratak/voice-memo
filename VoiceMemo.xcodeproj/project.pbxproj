@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		042A489BB47143819C5F6D0A /* Pods_VoiceMemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C44226C43362A6DFD84132 /* Pods_VoiceMemoTests.framework */; };
 		49B1FE07CE66E23D12278D58 /* Pods_VoiceMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8467E5F11B51F9095035FA /* Pods_VoiceMemo.framework */; };
-		4EE2F627D62B4CA930F2F463 /* Pods_VoiceMemo_VoiceMemoIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4906903C77710774BBDE29CF /* Pods_VoiceMemo_VoiceMemoIntents.framework */; };
 		692E8F1A044C09322F479342 /* Pods_VoiceMemo_VoiceMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8157BDA2AB881EA5610247 /* Pods_VoiceMemo_VoiceMemoUITests.framework */; };
+		B0229C7426198BF10057C142 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F33E112618B9C30030DD26 /* Persistence.swift */; };
+		B0229C7B26198BF60057C142 /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0BDCB9B2618B68E00C5CE65 /* Memo.xcdatamodeld */; };
 		B0289B34261416480083C9E9 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0289B33261416480083C9E9 /* Intents.framework */; };
 		B0289B37261416480083C9E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B36261416480083C9E9 /* IntentHandler.swift */; };
 		B0289B3F261416480083C9E9 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0289B3E261416480083C9E9 /* IntentsUI.framework */; };
@@ -18,16 +19,19 @@
 		B0289B45261416480083C9E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0289B43261416480083C9E9 /* MainInterface.storyboard */; };
 		B0289B49261416480083C9E9 /* VoiceMemoIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0289B3D261416480083C9E9 /* VoiceMemoIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B0289B4C261416480083C9E9 /* VoiceMemoIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0289B32261416480083C9E9 /* VoiceMemoIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B0289B8226141A980083C9E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B36261416480083C9E9 /* IntentHandler.swift */; };
-		B0289BE726142A7D0083C9E9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B36261416480083C9E9 /* IntentHandler.swift */; };
 		B02A2F2F2612335D0088E6A3 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02A2F2E2612335D0088E6A3 /* AddMemoView.swift */; };
-		B031B2722618AA4D00A80226 /* RealmConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031B2712618AA4D00A80226 /* RealmConfiguration.swift */; };
 		B040287D2614A7B500E04C6B /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289B41261416480083C9E9 /* IntentViewController.swift */; };
 		B067A55E26181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
 		B067A55F26181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
 		B067A56026181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
 		B067A56126181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
 		B067A56226181C1100EF3286 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B067A56426181C1100EF3286 /* Intents.intentdefinition */; };
+		B07F6F1026196F9A00140A03 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F33E112618B9C30030DD26 /* Persistence.swift */; };
+		B07F6F5326198AAA00140A03 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F6F2B26198A6400140A03 /* WidgetKit.framework */; };
+		B07F6F5426198AAA00140A03 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F6F2D26198A6400140A03 /* SwiftUI.framework */; };
+		B07F6F5726198AAA00140A03 /* TestWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07F6F5626198AAA00140A03 /* TestWidget.swift */; };
+		B07F6F5926198AAB00140A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07F6F5826198AAB00140A03 /* Assets.xcassets */; };
+		B07F6F5D26198AAB00140A03 /* TestWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B07F6F5226198AAA00140A03 /* TestWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B0845D532612CC7900AAD582 /* VoiceMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0845D522612CC7900AAD582 /* VoiceMemo.swift */; };
 		B0BDCB9D2618B68E00C5CE65 /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0BDCB9B2618B68E00C5CE65 /* Memo.xcdatamodeld */; };
 		B0BDCB9E2618B68E00C5CE65 /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0BDCB9B2618B68E00C5CE65 /* Memo.xcdatamodeld */; };
@@ -54,6 +58,13 @@
 			remoteGlobalIDString = B0289B31261416480083C9E9;
 			remoteInfo = VoiceMemoIntents;
 		};
+		B07F6F5B26198AAB00140A03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0FBDA7B2611F53700290AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B07F6F5126198AAA00140A03;
+			remoteInfo = TestWidgetExtension;
+		};
 		B0FBDA952611F53800290AFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B0FBDA7B2611F53700290AFC /* Project object */;
@@ -79,6 +90,7 @@
 			files = (
 				B0289B49261416480083C9E9 /* VoiceMemoIntentsUI.appex in Embed App Extensions */,
 				B0289B4C261416480083C9E9 /* VoiceMemoIntents.appex in Embed App Extensions */,
+				B07F6F5D26198AAB00140A03 /* TestWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,10 +101,10 @@
 		06B2261E3EBEAFAE61BF5B40 /* Pods-VoiceMemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemoTests.release.xcconfig"; path = "Target Support Files/Pods-VoiceMemoTests/Pods-VoiceMemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2655FC618363F0FF27C7DD0D /* Pods-VoiceMemo-VoiceMemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo-VoiceMemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-VoiceMemo-VoiceMemoUITests/Pods-VoiceMemo-VoiceMemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		29C44226C43362A6DFD84132 /* Pods_VoiceMemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceMemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4906903C77710774BBDE29CF /* Pods_VoiceMemo_VoiceMemoIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceMemo_VoiceMemoIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CD9C5AFAEB4C9A23F26E84 /* Pods-VoiceMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo.debug.xcconfig"; path = "Target Support Files/Pods-VoiceMemo/Pods-VoiceMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7E8157BDA2AB881EA5610247 /* Pods_VoiceMemo_VoiceMemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceMemo_VoiceMemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		874C36C61CD0A159762B6927 /* Pods-VoiceMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo.release.xcconfig"; path = "Target Support Files/Pods-VoiceMemo/Pods-VoiceMemo.release.xcconfig"; sourceTree = "<group>"; };
+		B0229C6D26198B630057C142 /* TestWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestWidgetExtension.entitlements; sourceTree = "<group>"; };
 		B0289B18261414490083C9E9 /* VoiceMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoiceMemo.entitlements; sourceTree = "<group>"; };
 		B0289B32261416480083C9E9 /* VoiceMemoIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VoiceMemoIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0289B33261416480083C9E9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
@@ -105,9 +117,14 @@
 		B0289B46261416480083C9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0289C2526145D400083C9E9 /* VoiceMemoIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoiceMemoIntents.entitlements; sourceTree = "<group>"; };
 		B02A2F2E2612335D0088E6A3 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
-		B031B2712618AA4D00A80226 /* RealmConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfiguration.swift; sourceTree = "<group>"; };
 		B067A56326181C1100EF3286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
 		B067A57026181C1A00EF3286 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
+		B07F6F2B26198A6400140A03 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B07F6F2D26198A6400140A03 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B07F6F5226198AAA00140A03 /* TestWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TestWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07F6F5626198AAA00140A03 /* TestWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWidget.swift; sourceTree = "<group>"; };
+		B07F6F5826198AAB00140A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B07F6F5A26198AAB00140A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0845D522612CC7900AAD582 /* VoiceMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemo.swift; sourceTree = "<group>"; };
 		B0BDCB9C2618B68E00C5CE65 /* Memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memo.xcdatamodel; sourceTree = "<group>"; };
 		B0F33E112618B9C30030DD26 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -125,8 +142,6 @@
 		B3A5A16FC60D764CEC7FCA4B /* Pods-VoiceMemo-VoiceMemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo-VoiceMemoUITests.release.xcconfig"; path = "Target Support Files/Pods-VoiceMemo-VoiceMemoUITests/Pods-VoiceMemo-VoiceMemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC3F97E7445BC0A15F7B8245 /* Pods-VoiceMemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemoTests.debug.xcconfig"; path = "Target Support Files/Pods-VoiceMemoTests/Pods-VoiceMemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC8467E5F11B51F9095035FA /* Pods_VoiceMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C981AF41A46B080D011D7AD2 /* Pods-VoiceMemo-VoiceMemoIntents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo-VoiceMemoIntents.release.xcconfig"; path = "Target Support Files/Pods-VoiceMemo-VoiceMemoIntents/Pods-VoiceMemo-VoiceMemoIntents.release.xcconfig"; sourceTree = "<group>"; };
-		DE638149CF1B1579ECD093EE /* Pods-VoiceMemo-VoiceMemoIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceMemo-VoiceMemoIntents.debug.xcconfig"; path = "Target Support Files/Pods-VoiceMemo-VoiceMemoIntents/Pods-VoiceMemo-VoiceMemoIntents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0289B34261416480083C9E9 /* Intents.framework in Frameworks */,
-				4EE2F627D62B4CA930F2F463 /* Pods_VoiceMemo_VoiceMemoIntents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +158,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0289B3F261416480083C9E9 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07F6F4F26198AAA00140A03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F6F5426198AAA00140A03 /* SwiftUI.framework in Frameworks */,
+				B07F6F5326198AAA00140A03 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +210,6 @@
 			children = (
 				B0289C2526145D400083C9E9 /* VoiceMemoIntents.entitlements */,
 				B0289B36261416480083C9E9 /* IntentHandler.swift */,
-				B031B2712618AA4D00A80226 /* RealmConfiguration.swift */,
 				B0289B38261416480083C9E9 /* Info.plist */,
 			);
 			path = VoiceMemoIntents;
@@ -213,15 +235,27 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B07F6F5526198AAA00140A03 /* TestWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B07F6F5626198AAA00140A03 /* TestWidget.swift */,
+				B07F6F5826198AAB00140A03 /* Assets.xcassets */,
+				B07F6F5A26198AAB00140A03 /* Info.plist */,
+			);
+			path = TestWidget;
+			sourceTree = "<group>";
+		};
 		B0FBDA7A2611F53700290AFC = {
 			isa = PBXGroup;
 			children = (
+				B0229C6D26198B630057C142 /* TestWidgetExtension.entitlements */,
 				B0289B242614156E0083C9E9 /* Shared */,
 				B0FBDA852611F53700290AFC /* VoiceMemo */,
 				B0FBDA972611F53800290AFC /* VoiceMemoTests */,
 				B0FBDAA22611F53800290AFC /* VoiceMemoUITests */,
 				B0289B35261416480083C9E9 /* VoiceMemoIntents */,
 				B0289B40261416480083C9E9 /* VoiceMemoIntentsUI */,
+				B07F6F5526198AAA00140A03 /* TestWidget */,
 				B0FBDA842611F53700290AFC /* Products */,
 				C18470DD22A04A7035D69A01 /* Pods */,
 				D43823FCEFFDA31D74AEEBD5 /* Frameworks */,
@@ -236,6 +270,7 @@
 				B0FBDA9F2611F53800290AFC /* VoiceMemoUITests.xctest */,
 				B0289B32261416480083C9E9 /* VoiceMemoIntents.appex */,
 				B0289B3D261416480083C9E9 /* VoiceMemoIntentsUI.appex */,
+				B07F6F5226198AAA00140A03 /* TestWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,8 +324,6 @@
 				B3A5A16FC60D764CEC7FCA4B /* Pods-VoiceMemo-VoiceMemoUITests.release.xcconfig */,
 				BC3F97E7445BC0A15F7B8245 /* Pods-VoiceMemoTests.debug.xcconfig */,
 				06B2261E3EBEAFAE61BF5B40 /* Pods-VoiceMemoTests.release.xcconfig */,
-				DE638149CF1B1579ECD093EE /* Pods-VoiceMemo-VoiceMemoIntents.debug.xcconfig */,
-				C981AF41A46B080D011D7AD2 /* Pods-VoiceMemo-VoiceMemoIntents.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -303,7 +336,8 @@
 				29C44226C43362A6DFD84132 /* Pods_VoiceMemoTests.framework */,
 				B0289B33261416480083C9E9 /* Intents.framework */,
 				B0289B3E261416480083C9E9 /* IntentsUI.framework */,
-				4906903C77710774BBDE29CF /* Pods_VoiceMemo_VoiceMemoIntents.framework */,
+				B07F6F2B26198A6400140A03 /* WidgetKit.framework */,
+				B07F6F2D26198A6400140A03 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -315,7 +349,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0289B50261416480083C9E9 /* Build configuration list for PBXNativeTarget "VoiceMemoIntents" */;
 			buildPhases = (
-				E5E65277C13F34550D26A50F /* [CP] Check Pods Manifest.lock */,
 				B0289B2E261416480083C9E9 /* Sources */,
 				B0289B2F261416480083C9E9 /* Frameworks */,
 				B0289B30261416480083C9E9 /* Resources */,
@@ -346,6 +379,23 @@
 			productReference = B0289B3D261416480083C9E9 /* VoiceMemoIntentsUI.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		B07F6F5126198AAA00140A03 /* TestWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07F6F5E26198AAB00140A03 /* Build configuration list for PBXNativeTarget "TestWidgetExtension" */;
+			buildPhases = (
+				B07F6F4E26198AAA00140A03 /* Sources */,
+				B07F6F4F26198AAA00140A03 /* Frameworks */,
+				B07F6F5026198AAA00140A03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestWidgetExtension;
+			productName = TestWidgetExtension;
+			productReference = B07F6F5226198AAA00140A03 /* TestWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B0FBDA822611F53700290AFC /* VoiceMemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0FBDAA82611F53800290AFC /* Build configuration list for PBXNativeTarget "VoiceMemo" */;
@@ -354,7 +404,6 @@
 				B0FBDA7F2611F53700290AFC /* Sources */,
 				B0FBDA802611F53700290AFC /* Frameworks */,
 				B0FBDA812611F53700290AFC /* Resources */,
-				7504B17F94269DE080506BC3 /* [CP] Embed Pods Frameworks */,
 				B0289B53261416480083C9E9 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -362,6 +411,7 @@
 			dependencies = (
 				B0289B48261416480083C9E9 /* PBXTargetDependency */,
 				B0289B4B261416480083C9E9 /* PBXTargetDependency */,
+				B07F6F5C26198AAB00140A03 /* PBXTargetDependency */,
 			);
 			name = VoiceMemo;
 			productName = VoiceMemo;
@@ -395,7 +445,6 @@
 				B0FBDA9B2611F53800290AFC /* Sources */,
 				B0FBDA9C2611F53800290AFC /* Frameworks */,
 				B0FBDA9D2611F53800290AFC /* Resources */,
-				2F1E90E17B8143FC574D185E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +469,9 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					B0289B3C261416480083C9E9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					B07F6F5126198AAA00140A03 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 					B0FBDA822611F53700290AFC = {
@@ -454,6 +506,7 @@
 				B0FBDA9E2611F53800290AFC /* VoiceMemoUITests */,
 				B0289B31261416480083C9E9 /* VoiceMemoIntents */,
 				B0289B3C261416480083C9E9 /* VoiceMemoIntentsUI */,
+				B07F6F5126198AAA00140A03 /* TestWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -471,6 +524,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0289B45261416480083C9E9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07F6F5026198AAA00140A03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F6F5926198AAB00140A03 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,40 +561,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F1E90E17B8143FC574D185E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VoiceMemo-VoiceMemoUITests/Pods-VoiceMemo-VoiceMemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VoiceMemo-VoiceMemoUITests/Pods-VoiceMemo-VoiceMemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoiceMemo-VoiceMemoUITests/Pods-VoiceMemo-VoiceMemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7504B17F94269DE080506BC3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VoiceMemo/Pods-VoiceMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VoiceMemo/Pods-VoiceMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoiceMemo/Pods-VoiceMemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		86303E734B12E776604376CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,28 +605,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5E65277C13F34550D26A50F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VoiceMemo-VoiceMemoIntents-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F9A0B90446C6F5967EB2AF22 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,7 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0BDCB9E2618B68E00C5CE65 /* Memo.xcdatamodeld in Sources */,
-				B031B2722618AA4D00A80226 /* RealmConfiguration.swift in Sources */,
+				B07F6F1026196F9A00140A03 /* Persistence.swift in Sources */,
 				B067A56126181C1100EF3286 /* Intents.intentdefinition in Sources */,
 				B040287D2614A7B500E04C6B /* IntentViewController.swift in Sources */,
 				B0289B37261416480083C9E9 /* IntentHandler.swift in Sources */,
@@ -642,8 +647,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B067A56226181C1100EF3286 /* Intents.intentdefinition in Sources */,
-				B0289BE726142A7D0083C9E9 /* IntentHandler.swift in Sources */,
 				B0289B42261416480083C9E9 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07F6F4E26198AAA00140A03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F6F5726198AAA00140A03 /* TestWidget.swift in Sources */,
+				B0229C7B26198BF60057C142 /* Memo.xcdatamodeld in Sources */,
+				B0229C7426198BF10057C142 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +670,6 @@
 				B0845D532612CC7900AAD582 /* VoiceMemo.swift in Sources */,
 				B02A2F2F2612335D0088E6A3 /* AddMemoView.swift in Sources */,
 				B0BDCB9D2618B68E00C5CE65 /* Memo.xcdatamodeld in Sources */,
-				B0289B8226141A980083C9E9 /* IntentHandler.swift in Sources */,
 				B067A55E26181C1100EF3286 /* Intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +704,11 @@
 			isa = PBXTargetDependency;
 			target = B0289B31261416480083C9E9 /* VoiceMemoIntents */;
 			targetProxy = B0289B4A261416480083C9E9 /* PBXContainerItemProxy */;
+		};
+		B07F6F5C26198AAB00140A03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B07F6F5126198AAA00140A03 /* TestWidgetExtension */;
+			targetProxy = B07F6F5B26198AAB00140A03 /* PBXContainerItemProxy */;
 		};
 		B0FBDA962611F53800290AFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -736,7 +754,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JS28CJ2CCH.VoiceMemo.VoiceMemoIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo.VoiceMemoIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -755,7 +773,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JS28CJ2CCH.VoiceMemo.VoiceMemoIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo.VoiceMemoIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -765,7 +783,6 @@
 		};
 		B0289B51261416480083C9E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE638149CF1B1579ECD093EE /* Pods-VoiceMemo-VoiceMemoIntents.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VoiceMemoIntents/VoiceMemoIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -776,7 +793,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JS28CJ2CCH.VoiceMemo.VoiceMemoIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo.VoiceMemoIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -786,7 +803,6 @@
 		};
 		B0289B52261416480083C9E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C981AF41A46B080D011D7AD2 /* Pods-VoiceMemo-VoiceMemoIntents.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VoiceMemoIntents/VoiceMemoIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -797,7 +813,51 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JS28CJ2CCH.VoiceMemo.VoiceMemoIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo.VoiceMemoIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B07F6F5F26198AAB00140A03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TestWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JS28CJ2CCH;
+				INFOPLIST_FILE = TestWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo.TestWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B07F6F6026198AAB00140A03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TestWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JS28CJ2CCH;
+				INFOPLIST_FILE = TestWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo.TestWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -941,10 +1001,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JS28CJ2CCH.VoiceMemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -966,10 +1026,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JS28CJ2CCH.VoiceMemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1078,6 +1138,15 @@
 			buildConfigurations = (
 				B0289B51261416480083C9E9 /* Debug */,
 				B0289B52261416480083C9E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B07F6F5E26198AAB00140A03 /* Build configuration list for PBXNativeTarget "TestWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07F6F5F26198AAB00140A03 /* Debug */,
+				B07F6F6026198AAB00140A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
