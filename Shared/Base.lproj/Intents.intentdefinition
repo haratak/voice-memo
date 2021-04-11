@@ -22,19 +22,19 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>牛のメモを作成します</string>
+			<string>母体の状態の記録を作成します</string>
 			<key>INIntentDescriptionID</key>
 			<string>x6wRyr</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>5</integer>
+			<integer>10</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key>number,condition</key>
+				<key>number,rightOvary,leftOvary,treatment,uterusCondition</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>耳標番号${number}、状態${condition}</string>
+					<string>母体記録の作成</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>vPrhUA</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -45,20 +45,23 @@
 			<string>CreateMemo</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key>number,condition</key>
+				<key>number,rightOvary,leftOvary,treatment,uterusCondition</key>
 				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
 					<key>INIntentParameterCombinationSubtitle</key>
-					<string>状態${condition}で登録しました。</string>
+					<string>以下の内容で記録を作成しました。
+耳標番号 ${number}
+左の卵巣  ${leftOvary}
+右の卵巣 ${rightOvary}
+子宮の状態 ${uterusCondition}
+処置 ${treatment}</string>
 					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>qPlgM9</string>
+					<string>DtB8QH</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>耳標番号${number}</string>
+					<string>母体記録の作成</string>
 					<key>INIntentParameterCombinationTitleID</key>
-					<string>ixnCEy</string>
+					<string>APJ6JC</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
@@ -75,7 +78,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataMaximumValue</key>
-						<integer>1000</integer>
+						<integer>10000</integer>
 						<key>INIntentParameterMetadataType</key>
 						<string>Field</string>
 					</dict>
@@ -144,7 +147,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>状態</string>
+					<string>右の卵巣</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>QCOp68</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -152,12 +155,16 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
+						<string>Characters</string>
 						<key>INIntentParameterMetadataDefaultValueID</key>
 						<string>ii4kiF</string>
+						<key>INIntentParameterMetadataDisableSmartDashes</key>
+						<true/>
+						<key>INIntentParameterMetadataDisableSmartQuotes</key>
+						<true/>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>condition</string>
+					<string>rightOvary</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
@@ -170,7 +177,7 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>状態を教えて下さい</string>
+							<string>右の卵巣の状態を教えてください</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
 							<string>NUO7T3</string>
 							<key>INIntentParameterPromptDialogType</key>
@@ -180,7 +187,151 @@
 					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>
+					<integer>10</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>左の卵巣</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>1NYZ9H</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>3</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Characters</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>5AJn7U</string>
+						<key>INIntentParameterMetadataDisableSmartDashes</key>
+						<true/>
+						<key>INIntentParameterMetadataDisableSmartQuotes</key>
+						<true/>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>leftOvary</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>左の卵巣の状態を教えてください</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>lWJwJ9</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>6</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>子宮の状態</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>HtKjmL</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>4</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Characters</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>yaKmdY</string>
+						<key>INIntentParameterMetadataDisableSmartDashes</key>
+						<true/>
+						<key>INIntentParameterMetadataDisableSmartQuotes</key>
+						<true/>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>uterusCondition</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>子宮の状態を教えてください</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>3oNmbU</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>8</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>処置</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>MBTuGY</string>
+					<key>INIntentParameterDisplayPriority</key>
 					<integer>5</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Characters</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>XgeeO9</string>
+						<key>INIntentParameterMetadataDisableSmartDashes</key>
+						<true/>
+						<key>INIntentParameterMetadataDisableSmartQuotes</key>
+						<true/>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>treatment</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>処置内容を教えてください</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>zWQJoo</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>7</integer>
 					<key>INIntentParameterType</key>
 					<string>String</string>
 				</dict>
@@ -191,11 +342,25 @@
 				<array>
 					<dict>
 						<key>INIntentResponseCodeConciseFormatString</key>
-						<string>耳標番号 ${number}で状態${condition}を登録しました。</string>
+						<string>耳標番号 ${number}の母体記録を作成しました。
+内容は次のとおりです。
+左卵巣${leftOvary}
+右卵巣 ${rightOvary} 
+子宮の状態 ${uterusCondition}
+処置 ${treatment} 内容は次のとおりです。
+左卵巣${leftOvary}
+右卵巣 ${rightOvary} 
+子宮の状態 ${uterusCondition}
+処置 ${treatment} </string>
 						<key>INIntentResponseCodeConciseFormatStringID</key>
 						<string>NUoik5</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>耳標番号 ${number}で状態${condition}を登録しました。</string>
+						<string>耳標番号 ${number}の母体記録を作成しました。
+内容は次のとおりです。
+左卵巣${leftOvary}
+右卵巣 ${rightOvary} 
+子宮の状態 ${uterusCondition}
+処置 ${treatment} </string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>8kgwcl</string>
 						<key>INIntentResponseCodeName</key>
@@ -205,11 +370,11 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeConciseFormatString</key>
-						<string>しっぱいしました。　</string>
+						<string>登録に失敗しました</string>
 						<key>INIntentResponseCodeConciseFormatStringID</key>
 						<string>TFSmHo</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>しっぱいしました。　</string>
+						<string>登録に失敗しました</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>d2K5tN</string>
 						<key>INIntentResponseCodeName</key>
@@ -217,7 +382,7 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>3</integer>
+				<integer>6</integer>
 				<key>INIntentResponseParameters</key>
 				<array>
 					<dict>
@@ -242,20 +407,64 @@
 						<key>INIntentResponseParameterDisplayPriority</key>
 						<integer>2</integer>
 						<key>INIntentResponseParameterName</key>
-						<string>condition</string>
+						<string>leftOvary</string>
 						<key>INIntentResponseParameterTag</key>
 						<integer>3</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Right Ovary</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>r6EsfZ</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>3</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>rightOvary</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>4</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Uterus Condition</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>7ROAJQ</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>4</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>uterusCondition</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>5</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Treatment</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>yF1gOC</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>5</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>treatment</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>6</integer>
 						<key>INIntentResponseParameterType</key>
 						<string>String</string>
 					</dict>
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>牛の記録</string>
+			<string>母体記録の作成</string>
 			<key>INIntentTitleID</key>
 			<string>ASfAAA</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
+			<key>INIntentUserConfirmationRequired</key>
+			<true/>
 			<key>INIntentVerb</key>
 			<string>Create</string>
 		</dict>
