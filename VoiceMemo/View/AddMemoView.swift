@@ -10,8 +10,11 @@ import SwiftUI
 struct AddMemoView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var condition:String = ""
     @State private var number:Int = 0
+    @State private var leftOvary:String = ""
+    @State private var rightOvary:String = ""
+    @State private var uterusCondition:String = ""
+    @State private var treatment:String = ""
     @State private var date:Date = Date()
     
 
@@ -23,18 +26,32 @@ struct AddMemoView: View {
                     TextField("" ,text: self.$number.IntToStrDef(0))
                         .keyboardType(.decimalPad)
                 }
-                Section(header: Text("本文")){
-                    TextField("" ,text: self.$condition
+                Section(header: Text("左の卵巣")){
+                    TextField("" ,text: self.$leftOvary
                     )
         
                 }
-                Section(header: Text("日時")){
+                Section(header: Text("右の卵巣")){
+                    TextField("" ,text: self.$rightOvary
+                    )
+        
+                }
+                Section(header: Text("子宮の状態")){
+                    TextField("" ,text: self.$uterusCondition
+                    )
+        
+                }
+                Section(header: Text("処置")){
+                    TextField("" ,text: self.$treatment
+                    )
+                }
+                Section(header: Text("記録日")){
                     DatePicker("",
                                selection: self.$date,displayedComponents:.date)
                         .labelsHidden()
                 }
             }
-            .navigationTitle("追加")
+            .navigationTitle("記録を追加する")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
@@ -63,8 +80,10 @@ struct AddMemoView: View {
             let newItem = Memo(context: viewContext)
             newItem.date = self.date
             newItem.number = Int32(self.number)
-            newItem.condition = self.condition
-
+            newItem.leftOvary = self.leftOvary
+            newItem.rightOvary = self.rightOvary
+            newItem.uterusCondition = self.uterusCondition
+            newItem.treatment = self.treatment
             do {
                 try viewContext.save()
             } catch {
