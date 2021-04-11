@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
-            .navigationTitle("リスト")
+            .navigationTitle("ツッコーーム")
             .toolbar{
                       ToolbarItem(placement: .navigationBarTrailing){
                           Button(action: {
