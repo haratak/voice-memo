@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Memo" representedClassName="Memo" syncable="YES" codeGenerationType="class">
-        <attribute name="condition" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="leftOvary" optional="YES" attributeType="String"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rightOvary" optional="YES" attributeType="String"/>
+        <attribute name="treatment" optional="YES" attributeType="String"/>
+        <attribute name="uterusCondition" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Memo" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Memo" positionX="-63" positionY="-18" width="128" height="119"/>
     </elements>
 </model>
