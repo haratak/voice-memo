@@ -26,10 +26,13 @@ struct Provider {
         self.moc = context
     }
     
-    func addMemo(number:Int32,condition:String)->Void{
+    func addMemo(number:Int32,leftOvary:String,rightOvary:String,uterusCondition:String,treatment:String)->Void{
         let newItem = Memo(context: moc)
         newItem.number = number
-        newItem.condition = condition
+        newItem.leftOvary = leftOvary
+        newItem.rightOvary = rightOvary
+        newItem.uterusCondition = uterusCondition
+        newItem.treatment = treatment
         newItem.date = Date()
         do{
             try moc.save()
@@ -41,6 +44,7 @@ struct Provider {
 
 }
 class IntentHandler: INExtension,CreateMemoIntentHandling{
+    
     var moc = PersistenceController.shared.managedObjectContext
     
     override func handler(for intent: INIntent) -> Any {
@@ -60,15 +64,37 @@ class IntentHandler: INExtension,CreateMemoIntentHandling{
                         userActivity: nil))
                 return
         }
-        guard let condition = intent.condition
+        guard let rightOvary = intent.rightOvary
            else {
                 completion(CreateMemoIntentResponse(code: .failure,
                         userActivity: nil))
                 return
         }
+        guard let leftOvary = intent.leftOvary
+           else {
+                completion(CreateMemoIntentResponse(code: .failure,
+                        userActivity: nil))
+                return
+        }
+
+        guard let treatment = intent.treatment
+           else {
+                completion(CreateMemoIntentResponse(code: .failure,
+                        userActivity: nil))
+                return
+        }
+
+        guard let uterusCondition = intent.uterusCondition
+           else {
+                completion(CreateMemoIntentResponse(code: .failure,
+                        userActivity: nil))
+                return
+        }
+
+
         
-        Provider(context: moc).addMemo(number: Int32(truncating: number), condition: condition)
-        completion((CreateMemoIntentResponse).success(number: number, condition: condition))
+        Provider(context: moc).addMemo(number: Int32(truncating: number),leftOvary:leftOvary,rightOvary:rightOvary,uterusCondition:uterusCondition,treatment:treatment)
+        completion((CreateMemoIntentResponse).success(number: number, leftOvary:leftOvary,rightOvary:rightOvary,uterusCondition:uterusCondition,treatment:treatment))
     }
     
     func resolveNumber(for intent: CreateMemoIntent, with completion: @escaping (CreateMemoNumberResolutionResult) -> Void) {
@@ -80,13 +106,42 @@ class IntentHandler: INExtension,CreateMemoIntentHandling{
         }
     }
     
-    func resolveCondition(for intent: CreateMemoIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
-        if let condition = intent.condition {
-            completion(INStringResolutionResult.success(with:  condition))
-        } else {
+    
+    func resolveRightOvary(for intent: CreateMemoIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        if let rightOvary = intent.rightOvary{
+            completion(INStringResolutionResult.success(with: rightOvary))
+        }else{
             completion(INStringResolutionResult.needsValue())
             return
         }
     }
+    
+    func resolveLeftOvary(for intent: CreateMemoIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        if let leftOvary = intent.leftOvary{
+            completion(INStringResolutionResult.success(with: leftOvary))
+        }else{
+            completion(INStringResolutionResult.needsValue())
+            return
+        }
+    }
+    
+    func resolveTreatment(for intent: CreateMemoIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        if let treatment = intent.treatment{
+                    completion(INStringResolutionResult.success(with: treatment))
+                }else{
+                    completion(INStringResolutionResult.needsValue())
+                    return
+                }
+    }
+    
+    func resolveUterusCondition(for intent: CreateMemoIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        if let uterusCondition = intent.uterusCondition{
+                    completion(INStringResolutionResult.success(with: uterusCondition))
+                }else{
+                    completion(INStringResolutionResult.needsValue())
+                    return
+                }
+    }
+    
         
 }
