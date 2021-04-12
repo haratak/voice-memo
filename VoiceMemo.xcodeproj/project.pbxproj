@@ -245,6 +245,13 @@
 			path = TestWidget;
 			sourceTree = "<group>";
 		};
+		B0D8ED472624090C00D6BB1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B0FBDA7A2611F53700290AFC = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +285,7 @@
 		B0FBDA852611F53700290AFC /* VoiceMemo */ = {
 			isa = PBXGroup;
 			children = (
+				B0D8ED472624090C00D6BB1A /* Model */,
 				B0289B18261414490083C9E9 /* VoiceMemo.entitlements */,
 				B0BDCB9B2618B68E00C5CE65 /* Memo.xcdatamodeld */,
 				B0F33E112618B9C30030DD26 /* Persistence.swift */,
@@ -992,6 +1000,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VoiceMemo/VoiceMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VoiceMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = JS28CJ2CCH;
 				ENABLE_PREVIEWS = YES;
@@ -1001,6 +1010,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1017,6 +1027,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VoiceMemo/VoiceMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VoiceMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = JS28CJ2CCH;
 				ENABLE_PREVIEWS = YES;
@@ -1026,6 +1037,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuyahara.ushimemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

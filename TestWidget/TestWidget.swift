@@ -81,7 +81,7 @@ struct TestWidgetEntryView : View {
 
     var body: some View {
         VStack{
-                    Text(entry.memo.first?.condition ?? "test")
+//                    Text(entry.memo.first?.condition ?? "test")
                     Text(entry.date, style: .time)
                 }
 }

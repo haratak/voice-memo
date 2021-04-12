@@ -9,21 +9,33 @@ import SwiftUI
 
 struct AddMemoView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var number:Int = 0
-    @State private var leftOvary:String = ""
+//    @Binding var isAdding:Bool
+//    var memo: Memo?
+//    @State private var editMemo: Memo
+    @State private var inputNumber:Int = 0
+    @State private var leftOvary:String =  ""
     @State private var rightOvary:String = ""
     @State private var uterusCondition:String = ""
     @State private var treatment:String = ""
     @State private var date:Date = Date()
     
-
-    var body: some View {
     
-        NavigationView{
+//    init(_ memo:Memo?) {
+//        self.memo = memo
+//        if let memo = memo {
+//            editMemo = State(wrappedValue: Memo(Int32(memo.number),memo.leftOvary ?? "",memo.rightOvary ?? "",memo.uterusCondition ?? "", memo.treatment ?? "", memo.date ?? Date()))
+//            inputNumber = Int(memo.number)
+//            leftOvary = memo.leftOvary ?? ""
+//            rightOvary = memo.rightOvary ?? ""
+//            uterusCondition = memo.uterusCondition ?? ""
+//            treatment = memo.treatment ?? ""
+//            date = memo.date ?? Date()
+//        }else{}
+//    }
+    var body: some View {
             List{
                 Section(header: Text("耳標番号")){
-                    TextField("" ,text: self.$number.IntToStrDef(0))
+                    TextField("" ,text: self.$inputNumber.IntToStrDef(0))
                         .keyboardType(.decimalPad)
                 }
                 Section(header: Text("左の卵巣")){
@@ -51,46 +63,36 @@ struct AddMemoView: View {
                         .labelsHidden()
                 }
             }
-            .navigationTitle("記録を追加する")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action: {
-                            addItem()
-                            self.presentationMode.wrappedValue.dismiss()
-                        
-                    },label: {
-                        Text("完了")
-                    })
-                }
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    },label :{
-                        Text("キャンセル")
-                    })
-                }
+        .listStyle(GroupedListStyle())
+        .navigationTitle("記録を追加する")
+        .toolbar{
+            ToolbarItem(placement: .navigationBarTrailing){
+                Button(action: {
+                        addItem()
+                },label: {
+                    Text("完了")
+                })
             }
         }
-        .listStyle(GroupedListStyle())
         }
     
     private func addItem() {
-        withAnimation {
-            let newItem = Memo(context: viewContext)
-            newItem.date = self.date
-            newItem.number = Int32(self.number)
-            newItem.leftOvary = self.leftOvary
-            newItem.rightOvary = self.rightOvary
-            newItem.uterusCondition = self.uterusCondition
-            newItem.treatment = self.treatment
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            withAnimation {
+                let newItem = Memo(context: viewContext)
+                newItem.date = self.date
+                newItem.number = Int32(self.inputNumber)
+                newItem.leftOvary = self.leftOvary
+                newItem.rightOvary = self.rightOvary
+                newItem.uterusCondition = self.uterusCondition
+                newItem.treatment = self.treatment
+                do {
+                    try viewContext.save()
+                } catch {
+                    let nsError = error as NSError
+                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                }
             }
-        }
+        
     }
 }
 
